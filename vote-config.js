@@ -1,3 +1,6 @@
-// Supabase project URL and publishable (anon) key go here.
-// NEVER put a service_role or secret key in this public repository.
-window.TRIP_VOTE_CONFIG = { url: '', anonKey: '' };
+
+window.TRIP_VOTE_CONFIG = {
+  url: 'https://wkciwktlljoemplmjffu.supabase.co',
+  anonKey: 'sb_publishable_Fbp5XhIVAbsApQS7v3N5PA_BJ6i1YjI'
+};
+  
