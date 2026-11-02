@@ -1,6 +1,6 @@
 -- Run in Supabase SQL Editor. Public demo voting: NOT identity-secure.
 create table if not exists public.trip_votes (
- voter text primary key check (voter in ('그냥유자','예브니혀나','귀여운재나','인싸어목징')),
+ voter text primary key check (voter in ('상코미유자','예쀼니혀나','귀여미재나','핫걸어목징')),
  choice integer not null check (choice between 0 and 8),
  updated_at timestamptz not null default now()
 );
