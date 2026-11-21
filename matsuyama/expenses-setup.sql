@@ -13,14 +13,14 @@ create table if not exists public.matsu_expense_access (
  code_hash text not null
 );
 insert into public.matsu_expense_access(id,code_hash)
-values (1,crypt('REPLACE_WITH_A_LONG_RANDOM_SHARED_CODE',gen_salt('bf')))
+values (1,crypt('REPLACE_WITH_A_LONG_RANDOM_SHARED_CODE',extensions.gen_salt('bf')))
 on conflict (id) do update set code_hash=excluded.code_hash;
 alter table public.matsu_expenses enable row level security;
 alter table public.matsu_expense_access enable row level security;
 revoke all on public.matsu_expenses from anon,authenticated;
 revoke all on public.matsu_expense_access from anon,authenticated;
 create or replace function public.matsu_code_ok(p_code text) returns boolean language sql stable security definer set search_path='' as $$
- select exists(select 1 from public.matsu_expense_access where id=1 and code_hash=public.crypt(p_code,code_hash))
+ select exists(select 1 from public.matsu_expense_access where id=1 and code_hash=extensions.crypt(p_code,code_hash))
 $$;
 revoke all on function public.matsu_code_ok(text) from public,anon,authenticated;
 create or replace function public.matsu_expense_list(p_code text)
