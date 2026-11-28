@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="여고생 친구 네 명이 둥글게 모여 함께 여행 가계부를 쓰는 따뜻한 애니메이션풍 일러스트">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#263f3b"/><stop offset=".55" stop-color="#e5bd9b"/><stop offset="1" stop-color="#d3a48b"/></linearGradient>
+<radialGradient id="sun"><stop stop-color="#ffedca" stop-opacity=".95"/><stop offset="1" stop-color="#ffe5b5" stop-opacity="0"/></radialGradient>
+<linearGradient id="cover" x2="1" y2="1"><stop stop-color="#fdf2d9"/><stop offset="1" stop-color="#e8e6da"/></linearGradient>
+<linearGradient id="coat" x2=".8" y2="1"><stop stop-color="#ffe4cf"/><stop offset="1" stop-color="#e9a999"/></linearGradient>
+<filter id="shade" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="2" dy="8" stdDeviation="9" flood-color="#463e39" flood-opacity=".25"/></filter>
+</defs>
+<rect width="1200" height="560" fill="url(#bg)"/>
+<circle cx="1060" cy="90" r="350" fill="url(#sun)"/>
+<path d="M0 460Q190 345 380 422T760 423T1200 410V560H0Z" fill="#edd4bc" opacity=".66"/>
+<path d="M0 520Q240 470 490 512T1200 495V560H0Z" fill="#f8dfc9" opacity=".8"/>
+<rect x="840" y="25" width="310" height="180" rx="12" fill="#f9dabb" opacity=".33"/>
+<path d="M994 26V205M840 116H1150" stroke="#fff8db" stroke-width="11" opacity=".28"/>
+<!-- girl left, loose bun -->
+<g filter="url(#shade)">
+<path d="M375 390Q346 310 410 275Q478 245 526 308L555 520H289Z" fill="#d7ad91"/>
+<path d="M422 192Q361 159 385 114Q413 79 461 115Q476 156 447 192" fill="#412f2c"/>
+<ellipse cx="454" cy="235" rx="81" ry="93" fill="#4d342f"/>
+<ellipse cx="461" cy="245" rx="65" ry="77" fill="#f3c8ac"/>
+<path d="M391 215Q397 129 459 131Q532 141 521 225Q497 185 460 191Q420 210 391 215" fill="#51362e"/>
+<path d="M422 244q15 -9 28 0m35 -1q14 -10 28 0" fill="none" stroke="#5e3b33" stroke-width="4" stroke-linecap="round"/>
+<path d="M455 278q19 17 37-2" fill="none" stroke="#bb736b" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="414" cy="268" rx="18" ry="9" fill="#df9090" opacity=".5"/><ellipse cx="504" cy="268" rx="18" ry="9" fill="#df9090" opacity=".5"/>
+<path d="M395 340Q460 308 529 348L575 560H310Z" fill="#f1d3b9"/>
+<path d="M452 318l18 48 16-49" fill="#fff0d3"/>
+</g>
+<!-- girl middle-back with bangs -->
+<g filter="url(#shade)">
+<path d="M555 345Q548 256 622 245Q706 251 719 348L739 514H544Z" fill="#38434e"/>
+<ellipse cx="636" cy="190" rx="82" ry="96" fill="#333039"/>
+<ellipse cx="638" cy="215" rx="66" ry="77" fill="#f6c8af"/>
+<path d="M570 191Q564 102 642 97Q719 111 704 194L687 164Q641 195 602 159Z" fill="#342f38"/>
+<path d="M595 216q16 -9 27 0m37 0q14 -10 26 0" fill="none" stroke="#514047" stroke-width="4" stroke-linecap="round"/>
+<path d="M622 249q17 16 36 0" fill="none" stroke="#bb7375" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="593" cy="233" rx="15" ry="7" fill="#ec9996" opacity=".45"/><ellipse cx="686" cy="233" rx="15" ry="7" fill="#ec9996" opacity=".45"/>
+<path d="M565 328Q641 283 711 333L745 523H526Z" fill="#52505c"/>
+<path d="M625 310l20 39 14-38" fill="#e8d2d4"/>
+</g>
+<!-- girl glasses upper-right -->
+<g filter="url(#shade)">
+<path d="M746 346Q725 285 773 245Q858 201 927 286L946 550H713Z" fill="#9c7770"/>
+<ellipse cx="804" cy="176" rx="70" ry="93" fill="#5b4039"/>
+<path d="M782 113Q744 72 779 58Q832 50 842 109" fill="#594039"/>
+<ellipse cx="813" cy="208" rx="65" ry="79" fill="#f3c5b0"/>
+<path d="M752 190Q746 130 809 122Q866 123 875 183Q852 157 805 159Q783 176 752 190" fill="#553a36"/>
+<ellipse cx="782" cy="218" rx="26" ry="23" fill="none" stroke="#5c4c47" stroke-width="5"/><ellipse cx="836" cy="218" rx="26" ry="23" fill="none" stroke="#5c4c47" stroke-width="5"/><path d="M808 216h4" stroke="#5c4c47" stroke-width="5"/>
+<path d="M787 255q24 32 47-3" fill="#fff0e0" stroke="#b87578" stroke-width="3"/>
+<path d="M748 319Q813 283 893 325L920 560H712Z" fill="#e4dbd5"/>
+</g>
+<!-- right leaning girl -->
+<g filter="url(#shade)">
+<path d="M916 361Q954 301 1038 333Q1113 375 1172 528L991 560H846Z" fill="url(#coat)"/>
+<ellipse cx="996" cy="251" rx="85" ry="103" fill="#3e302d"/>
+<ellipse cx="1003" cy="268" rx="67" ry="80" fill="#f3c3a9"/>
+<path d="M927 251Q932 170 1002 163Q1090 175 1070 250Q1032 206 993 212Q955 217 927 251" fill="#43332e"/>
+<path d="M972 271q14 -10 27 0m30 -1q14 -10 25 0" fill="none" stroke="#543d37" stroke-width="4" stroke-linecap="round"/>
+<path d="M1003 305q20 17 36-4" fill="none" stroke="#b87373" stroke-width="4" stroke-linecap="round"/>
+<path d="M975 338Q1038 323 1103 389L1196 560H955Z" fill="#de957e"/>
+<path d="M1081 428L1000 493" stroke="#f3b8a9" stroke-width="43" stroke-linecap="round"/>
+<path d="M999 492l-25 28" stroke="#f2c0ae" stroke-width="20" stroke-linecap="round"/>
+</g>
+<!-- shared notebook -->
+<g transform="translate(595 358) rotate(-9)" filter="url(#shade)">
+<rect x="-8" y="-8" width="375" height="214" rx="12" fill="#bca68e"/>
+<rect x="0" y="0" width="365" height="202" rx="9" fill="url(#cover)"/>
+<rect x="16" y="5" width="10" height="192" fill="#d9a27c"/>
+<g stroke="#b0aa9c" stroke-width="2" fill="none">
+<path d="M25 30h-19m19 26h-19m19 26h-19m19 26h-19m19 26h-19m19 26h-19"/>
+<path d="M46 61h285M46 91h285M46 121h285M46 151h285"/>
+</g>
+<text x="53" y="39" font-size="21" font-weight="700" fill="#835e54">우리 넷의 여행 가계부 ♡</text>
+<g fill="none" stroke="#789589" stroke-width="3"><path d="M50 72l6 6 10-12M50 102l6 6 10-12M50 132l6 6 10-12"/></g>
+<text x="81" y="79" font-size="18" fill="#715d54">공항버스</text><text x="256" y="79" font-size="17" fill="#715d54">¥4,000</text>
+<text x="81" y="109" font-size="18" fill="#715d54">점심 (우동)</text><text x="256" y="109" font-size="17" fill="#715d54">¥3,200</text>
+<text x="81" y="139" font-size="18" fill="#715d54">도고온천</text><text x="256" y="139" font-size="17" fill="#715d54">¥5,600</text>
+</g>
+<!-- pencil -->
+<path d="M1057 472L1035 538" stroke="#67534a" stroke-width="7" stroke-linecap="round"/>
+<path d="M1035 538l-5 12" stroke="#d4a487" stroke-width="5"/>
+<!-- travel memories -->
+<g transform="translate(485 485) rotate(-7)"><rect x="0" y="0" width="85" height="75" fill="#fefaf0"/><rect x="8" y="8" width="69" height="51" fill="#b8d3ce"/><path d="M9 58L37 29 49 42 69 19 78 58" fill="#859e8c"/></g>
+<circle cx="1102" cy="521" r="27" fill="#f5a243"/><path d="M1102 494l-8-12 10 4 10-6 3 12" fill="#638768"/>
+<!-- intentional clear-left overlay area for live UI text -->
+<rect x="0" y="0" width="330" height="560" fill="#183c36" opacity=".25"/>
+</svg>
