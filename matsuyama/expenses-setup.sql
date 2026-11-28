@@ -1,5 +1,6 @@
 -- Run in Supabase SQL Editor. Replace the placeholder code before running.
-create extension if not exists pgcrypto;
+create schema if not exists extensions;
+create extension if not exists pgcrypto with schema extensions;
 create table if not exists public.matsu_expenses (
  id uuid primary key default gen_random_uuid(),
  place text not null check (char_length(place) between 1 and 80),
@@ -13,7 +14,7 @@ create table if not exists public.matsu_expense_access (
  code_hash text not null
 );
 insert into public.matsu_expense_access(id,code_hash)
-values (1,crypt('REPLACE_WITH_A_LONG_RANDOM_SHARED_CODE',extensions.gen_salt('bf')))
+values (1,extensions.crypt('REPLACE_WITH_A_LONG_RANDOM_SHARED_CODE',extensions.gen_salt('bf')))
 on conflict (id) do update set code_hash=excluded.code_hash;
 alter table public.matsu_expenses enable row level security;
 alter table public.matsu_expense_access enable row level security;
