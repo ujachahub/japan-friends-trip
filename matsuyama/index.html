@@ -138,8 +138,9 @@ const defs=[
 ['city','🍊','마쓰야마 소개','도시 이야기 · 여행 분위기','D%C5%8Dgo_Onsen_Honkan.jpg'],
 ['plan','🗓️','날짜별 여행일정','DAY 1~3 · 이동 동선 · 숙박','Shimonada_Station.jpg'],
 ['transport','✈️','항공 · 교통 · 온천','항공편 · 노면전차 · 온천','Matsuyama_Castle_%28Matsuyama%29.jpg'],
-['budget','💸','여행 예산 · 예약','공동 예산 · 예약 확인','Mikan_%28mandarin%29.jpg'],
-['food','🍡','맛집 / 가볼만한 곳','맛집 투표 · 주요 관광지','Taimeshi.jpg']
+['budget','💸','여행 예산 · 예약','예산 계산기 · 예약 확인','Mikan_%28mandarin%29.jpg'],
+['food','🍡','맛집 / 가볼만한 곳','맛집 투표 · 주요 관광지','Taimeshi.jpg'],
+['expenses','💴','공동경비 장부','4명 공동 지출 · 날짜별 내역','Mikan_%28mandarin%29.jpg']
 ];
 const map={'🗓️ 날짜별 여행일정':'plan','✈️ 항공편 스케줄':'transport','🚃 우리가 이동하는 방법':'transport','💸 여행 예산 계산기':'budget','✅ 우리 여행 예약 체크':'budget','♨️ 도고온천 이용 가이드':'transport','🧳 캐리어 보관은 어디에?':'transport','🚋 도고온천 왕복 vs 공항 직행':'transport','🍡 마쓰야마 현지 맛집 가이드':'food','📍 마쓰야마 가볼 만한 곳':'food','🔗 예약 상품 바로가기':'budget'};
 const home=document.createElement('section');home.className='kiosk-home';home.innerHTML='<span style="font-size:12px;color:#b77d54;font-weight:900;letter-spacing:.15em">OUR MATSUYAMA TRIP</span><h2>🍊 어디부터 둘러볼까요?</h2><p>큰 카드를 선택하면 필요한 여행 정보가 펼쳐집니다.</p>';
@@ -156,7 +157,7 @@ for(const el of [...main.children]){
 if(el===hero||el===home||el===footer||Object.values(views).includes(el))continue;
 if(el.id==='about-city')current='city';
 if(el.tagName==='H2')current=map[el.textContent.trim()]||current;
-if(el.tagName==='SECTION'&&el.querySelector('a[href="./expenses.html"]'))current='budget';
+if(el.tagName==='SECTION'&&el.querySelector('a[href="./expenses.html"]'))current='expenses';
 views[current].append(el);
 }
 function show(id){
