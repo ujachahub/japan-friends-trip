@@ -156,8 +156,7 @@ const map={'🗓️ 날짜별 여행일정':'plan','✈️ 항공편 스케줄':
 const home=document.createElement('section');home.className='kiosk-home';home.innerHTML='<span style="font-size:12px;color:#b77d54;font-weight:900;letter-spacing:.15em">OUR MATSUYAMA TRIP</span><h2>🍊 어디부터 둘러볼까요?</h2><p>큰 카드를 선택하면 필요한 여행 정보가 펼쳐집니다.</p>';
 const quick=document.createElement('div');quick.className='expense-quick';
 quick.innerHTML='<div class="expense-quick-copy"><span class="expense-quick-emoji" aria-hidden="true">💴</span><div><strong>우리 넷의 공동 경비</strong><p>결제할 때마다 바로 기록해요 · 날짜별 내역과 4명 정산</p></div></div><a class="expense-quick-button" href="./expenses.html" aria-label="공동경비 장부 바로 열기">＋ 공동 경비 바로 입력 <span aria-hidden="true">↗</span></a>';
-home.append(quick);
-const grid=document.createElement('div');grid.className='kiosk-grid';home.append(grid);const views={};
+const grid=document.createElement('div');grid.className='kiosk-grid';home.append(grid);home.append(quick);const views={};
 for(const [id,icon,title,desc,photo] of defs){
 const tile=document.createElement('button');tile.type='button';tile.className='kiosk-tile';tile.style.backgroundImage='url("https://commons.wikimedia.org/wiki/Special:FilePath/'+photo+'?width=1000")';tile.innerHTML='<span class="ki">'+icon+'</span><span class="arrow">↗</span><span class="kt">'+title+'</span><span class="kd">'+desc+'</span>';tile.addEventListener('click',()=>show(id));grid.append(tile);
 const v=document.createElement('section');v.className='kiosk-view';v.id='kiosk-'+id;v.hidden=true;const bar=document.createElement('div');bar.className='kiosk-bar';const back=document.createElement('button');back.className='kiosk-back';back.textContent='← 메인 메뉴';back.addEventListener('click',()=>show('home'));const nav=document.createElement('div');nav.className='kiosk-topnav';
