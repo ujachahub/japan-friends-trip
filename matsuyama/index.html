@@ -45,7 +45,21 @@
 .expense-quick-button{z-index:2;background:#fff5de;color:#315246;box-shadow:0 8px 24px #283b2b44}
 .expense-quick-button:hover{background:#f3dfb7;color:#284d3a}
 @media(max-width:680px){.expense-quick{min-height:320px;background-position:65% center;align-content:space-between;align-items:flex-end}.expense-quick:before{background:linear-gradient(90deg,rgba(25,46,42,.82),rgba(27,45,43,.21)),linear-gradient(0deg,rgba(23,37,34,.62),transparent 52%)}.expense-quick-copy{align-self:flex-start}.expense-quick-button{align-self:flex-end}}
-</style><link rel="stylesheet" href="./expense-illustration.css?v=20261128-anime"><style>.trip-map-link,.trip-inline-link{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border:1px solid #d5e5d6;border-radius:9px;background:#ecf6ec;color:#316749;font-size:11px;font-weight:900;text-decoration:none;margin:7px 6px 0 0;cursor:pointer;white-space:normal;line-height:1.4}.trip-map-link:hover,.trip-inline-link:hover{background:#d9eddd}.onsen-prep{background:#f8faf1;border:1px solid #d5dfc7;border-radius:19px;padding:17px;margin:15px 0 20px}.onsen-prep-head{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:13px;font-size:18px}.onsen-prep-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.onsen-prep-list>div{background:#fff;border:1px solid #e7ebde;border-radius:12px;padding:12px;font-size:12px;line-height:1.75;color:#687468}.onsen-prep-list b{color:#3d5045}.onsen-prep-links{margin-top:12px}.trip-inline-link{font-size:12px;padding:9px 13px}@media(max-width:630px){.onsen-prep-list{grid-template-columns:1fr}.onsen-prep{padding:12px}}</style></head><body><main class="wrap">
+</style><link rel="stylesheet" href="./expense-illustration.css?v=20261128-anime"><style>.trip-map-link,.trip-inline-link{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border:1px solid #d5e5d6;border-radius:9px;background:#ecf6ec;color:#316749;font-size:11px;font-weight:900;text-decoration:none;margin:7px 6px 0 0;cursor:pointer;white-space:normal;line-height:1.4}.trip-map-link:hover,.trip-inline-link:hover{background:#d9eddd}.onsen-prep{background:#f8faf1;border:1px solid #d5dfc7;border-radius:19px;padding:17px;margin:15px 0 20px}.onsen-prep-head{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:13px;font-size:18px}.onsen-prep-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.onsen-prep-list>div{background:#fff;border:1px solid #e7ebde;border-radius:12px;padding:12px;font-size:12px;line-height:1.75;color:#687468}.onsen-prep-list b{color:#3d5045}.onsen-prep-links{margin-top:12px}.trip-inline-link{font-size:12px;padding:9px 13px}@media(max-width:630px){.onsen-prep-list{grid-template-columns:1fr}.onsen-prep{padding:12px}}</style><style>
+/* Three top-level discovery tabs, with only selected content visible. */
+.food-category-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:19px 0 24px}
+.food-category-tab{background:#fffdf7;color:#555f57;border:1px solid #e8ddd1;border-radius:16px;min-height:64px;padding:12px;font-size:clamp(15px,2vw,21px);font-weight:900;cursor:pointer;box-shadow:0 4px 12px #3c3b2f0b;transition:transform .2s,background .2s,box-shadow .2s}
+.food-category-tab:hover{background:#fff0e3;transform:translateY(-2px);box-shadow:0 8px 18px #43391f20}
+.food-category-tab:active{transform:scale(.97)}
+.food-category-tab.active{background:#f7b78d;color:#44352c;border-color:#efa978;box-shadow:0 6px 16px #d59b6b2a}
+.food-category-tab:focus-visible{outline:3px solid #a9bfae;outline-offset:3px}
+.food-category-panel[hidden]{display:none!important}
+.food-category-panel>h2:first-child{margin-top:12px}
+.kiosk-grid{margin-bottom:22px!important}
+.expense-quick{margin-top:0!important}
+@media(max-width:680px){.food-category-tabs{gap:6px;margin:13px 0 18px}.food-category-tab{font-size:14px;min-height:55px;padding:10px 4px;border-radius:12px}.kiosk-grid{margin-bottom:17px!important}}
+@media(prefers-reduced-motion:reduce){.food-category-tab{transition:none}}
+</style></head><body><main class="wrap">
 <header class="hero"><div class="hero-headline"><span class="eyebrow">🍊 GIRLS' MATS UYAMA TRIP</span><span class="update-stamp" aria-label="페이지 최근 수정 일자">🗓️ 최종 업데이트 <time id="last-updated" datetime="2026-11-12">2026.11.12</time></span></div><h1>우리 넷의<br><em>마쓰야마</em> 여행</h1><div class="decor">🍊</div><p>온천도, 바다도, 오래된 골목도<br>좋아하는 친구들과 함께하는 2박 3일</p><div class="datepill">2026.12.12 SAT — 12.14 MON</div></header>
 <section class="panel" id="about-city" style="margin-top:20px;background:linear-gradient(120deg,#fff8ee,#f1faef)">
 <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:38px">🍊</span><div><span class="eyebrow" style="font-size:11px">ABOUT MATSUYAMA</span><h2 style="margin:6px 0 3px">마쓰야마, 어떤 도시야?</h2></div></div>
@@ -177,6 +191,35 @@ const v=document.createElement('section');v.className='kiosk-view';v.id='kiosk-'
 for(const [ni,niIcon,niTitle] of defs){const b=document.createElement('button');b.type='button';b.dataset.destination=ni;b.textContent=niIcon+' '+niTitle;b.addEventListener('click',()=>show(ni));nav.append(b)}
 bar.append(back,nav);const heading=document.createElement('h2');heading.textContent=icon+' '+title;v.append(bar,heading);views[id]=v;
 }
+
+// 맛집·관광지·온천: show only one category at a time, preserving existing content.
+const foodView=views.food;
+const foodTabs=document.createElement('div');foodTabs.className='food-category-tabs';foodTabs.setAttribute('role','tablist');foodTabs.setAttribute('aria-label','맛집과 가볼만한 곳 카테고리');
+const foodPanels={};
+for(const [id,title] of [['restaurants','🍡 맛집'],['sights','📍 가볼만한 곳'],['onsen','♨️ 온천']]){
+ const button=document.createElement('button');button.type='button';button.className='food-category-tab';button.setAttribute('role','tab');button.dataset.foodCategory=id;button.textContent=title;button.setAttribute('aria-selected','false');button.addEventListener('click',()=>setFoodCategory(id));
+ foodTabs.append(button);
+ const panel=document.createElement('section');panel.className='food-category-panel';panel.dataset.foodPanel=id;panel.setAttribute('role','tabpanel');panel.hidden=true;foodPanels[id]=panel;
+}
+foodView.insertBefore(foodTabs,foodView.children[2]||null);
+for(const [id,headingId] of [['restaurants','food'],['sights','sights'],['onsen','dogo']]){
+ const heading=foodView.querySelector(':scope > h2#'+headingId);
+ if(!heading)continue;
+ let node=heading;
+ while(node && (node===heading || node.tagName!=='H2')){
+  const next=node.nextElementSibling;
+  foodPanels[id].append(node);
+  node=next;
+ }
+ foodView.append(foodPanels[id]);
+}
+function setFoodCategory(id){
+ if(!foodPanels[id])id='restaurants';
+ for(const [key,panel] of Object.entries(foodPanels))panel.hidden=key!==id;
+ for(const tab of foodTabs.querySelectorAll('button')){const active=tab.dataset.foodCategory===id;tab.classList.toggle('active',active);tab.setAttribute('aria-selected',String(active))}
+}
+setFoodCategory('restaurants');
+
 hero.insertAdjacentElement('afterend',home);for(const v of Object.values(views))main.insertBefore(v,footer);
 let current='city';
 for(const el of [...main.children]){
@@ -188,11 +231,11 @@ views[current].append(el);
 }
 function show(id){
 if(id!=='home'&&!views[id])id='home';
-home.hidden=id!=='home';hero.hidden=id!=='home';footer.hidden=id!=='home';
+home.hidden=id!=='home';hero.hidden=id!=='home';footer.hidden=id!=='home';if(id==='food')setFoodCategory('restaurants');
 for(const [key,v] of Object.entries(views)){v.hidden=id!==key;v.classList.toggle('active',id===key);for(const b of v.querySelectorAll('.kiosk-topnav button'))b.classList.toggle('current',b.dataset.destination===id)}
 const url=id==='home'?location.pathname+location.search:'#'+id;history.replaceState(null,'',url);window.scrollTo(0,0)
 }
-document.addEventListener('click',function(e){const b=e.target.closest('[data-jump]');if(!b)return;e.preventDefault();if(b.dataset.jump==='dogo'){show('food');requestAnimationFrame(()=>document.getElementById('dogo')?.scrollIntoView({behavior:'smooth',block:'start'}))}else if(b.dataset.jump==='day3'){show('plan');const tab=document.querySelector('.tab[data-day="3"]');if(tab)tab.click();requestAnimationFrame(()=>document.getElementById('day3')?.scrollIntoView({behavior:'smooth',block:'start'}))}});
+document.addEventListener('click',function(e){const b=e.target.closest('[data-jump]');if(!b)return;e.preventDefault();if(b.dataset.jump==='dogo'){show('food');setFoodCategory('onsen');requestAnimationFrame(()=>document.getElementById('dogo')?.scrollIntoView({behavior:'smooth',block:'start'}))}else if(b.dataset.jump==='day3'){show('plan');const tab=document.querySelector('.tab[data-day="3"]');if(tab)tab.click();requestAnimationFrame(()=>document.getElementById('day3')?.scrollIntoView({behavior:'smooth',block:'start'}))}});
 const hash=location.hash.slice(1);show(defs.some(x=>x[0]===hash)?hash:'home');
 })();
 </script></body></html>
