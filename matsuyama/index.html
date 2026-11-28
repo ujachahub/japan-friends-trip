@@ -192,6 +192,15 @@ for(const [ni,niIcon,niTitle] of defs){const b=document.createElement('button');
 bar.append(back,nav);const heading=document.createElement('h2');heading.textContent=icon+' '+title;v.append(bar,heading);views[id]=v;
 }
 
+hero.insertAdjacentElement('afterend',home);for(const v of Object.values(views))main.insertBefore(v,footer);
+let current='city';
+for(const el of [...main.children]){
+if(el===hero||el===home||el===footer||Object.values(views).includes(el))continue;
+if(el.id==='about-city')current='city';
+if(el.tagName==='H2')current=map[el.textContent.trim()]||current;
+
+views[current].append(el);
+}
 // 맛집·관광지·온천: show only one category at a time, preserving existing content.
 const foodView=views.food;
 const foodTabs=document.createElement('div');foodTabs.className='food-category-tabs';foodTabs.setAttribute('role','tablist');foodTabs.setAttribute('aria-label','맛집과 가볼만한 곳 카테고리');
@@ -220,15 +229,7 @@ function setFoodCategory(id){
 }
 setFoodCategory('restaurants');
 
-hero.insertAdjacentElement('afterend',home);for(const v of Object.values(views))main.insertBefore(v,footer);
-let current='city';
-for(const el of [...main.children]){
-if(el===hero||el===home||el===footer||Object.values(views).includes(el))continue;
-if(el.id==='about-city')current='city';
-if(el.tagName==='H2')current=map[el.textContent.trim()]||current;
 
-views[current].append(el);
-}
 function show(id){
 if(id!=='home'&&!views[id])id='home';
 home.hidden=id!=='home';hero.hidden=id!=='home';footer.hidden=id!=='home';if(id==='food')setFoodCategory('restaurants');
